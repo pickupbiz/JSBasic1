@@ -10,8 +10,12 @@
                 //Below is first name
                 var firstName = document.getElementById('fname').value;
                 var lastName = document.getElementById('lname').value;
-                console.log(firstName+ " "+ lastName);
-                document.getElementById("fullname").value = firstName+ " "+ lastName;
+                if(firstName.length>2){
+                    document.getElementById("fullname").value = firstName+ " "+ lastName;
+                } else{
+                    document.getElementById("fullname").value = "";
+                    alert("Please enter first name more than 3 char")
+                }
 
             }
         </script>        
